@@ -16,9 +16,9 @@ const Layout = ({ children }: P) => {
         <title>Viktorija Jovanovska</title>
         <meta
           name='description'
-        />
+      />
       </Head>
-      <main className='bg-[#F8F8F8] dark:bg-black overflow-hidden'>    
+      <main className='bg-pink dark:bg-black overflow-hidden'>    
         <Navbar />
         {children}
       </main>

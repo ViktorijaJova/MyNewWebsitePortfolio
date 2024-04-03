@@ -17,6 +17,12 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      boxShadow: {
+        'custom': '0px 1px 2px rgba(0,255,255,0.5), 0px 2px 4px rgba(0,255,255,0.5), 0px 4px 8px rgba(0,255,255,0.5), 0px 8px 16px rgba(0,255,255,0.5)',
+        'custom-white': '0px 1px 2px rgba(255,255,255,0.5), 0px 2px 4px rgba(255,255,255,0.5), 0px 4px 8px rgba(255,255,255,0.5), 0px 8px 16px rgba(255,255,255,0.5)',
+        'neon-rosegold': '0px 1px 2px rgba(255, 101, 117, 0.5), 0px 2px 4px rgba(255, 101, 117, 0.5), 0px 4px 8px rgba(255, 101, 117, 0.5), 0px 8px 16px rgba(255, 101, 117, 0.5), 0px 0px 80px rgba(255, 101, 117, 0.8)',
+
+      },
       screens: {
         smallest: "320px",
         small: "330px",
@@ -41,7 +47,7 @@ const config: Config = {
         "2xl": "1620px",
       },
       colors: {
-        purple: "#693193",
+        pink: "#FFEED9",
         white: "#FFFFFF",
         black: "#1F1F1F",
         yellow: "#D7DF23",
