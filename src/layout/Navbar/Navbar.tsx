@@ -6,12 +6,14 @@ import Nav from "./Nav";
 import MyThemeContext from "../store/store";
 import lightLogo from "./assets/light.svg";
 import darkLogo from "./assets/dark.svg";
-import { useRouter } from "next/router";
+import lightX from './assets/lightX.svg';
+import darkX from './assets/darkX.svg';
+import darkHam from './assets/darkHam.svg';
+import lightHam from './assets/lightHam.svg';
+
 
 const Navbar = () => {
   const [showModal, setShowModal] = useState<boolean>(false);
-  const [scrollDirection, setScrollDirection] = useState<"up" | "down">("down");
-  let lastScrollY = 0;
 
   const toggleModal = () => {
     setShowModal(!showModal);
@@ -24,33 +26,7 @@ const Navbar = () => {
     themeCtx.toggleThemeHandler();
   }
 
-  const [isAtTop, setIsAtTop] = useState(true);
 
-  const handleScroll = () => {
-    // Get the current scroll position
-    const scrollY = window.scrollY || window.pageYOffset;
-
-    // Check if the user is at the top of the screen
-    setIsAtTop(scrollY === 0);
-
-    if (scrollY > lastScrollY) {
-      setScrollDirection("down");
-    } else {
-      setScrollDirection("up");
-    }
-
-    lastScrollY = scrollY;
-  };
-
-  useEffect(() => {
-    // Add the event listener when the component mounts
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener when the component unmounts
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <nav id='header' className={`flex justify-center`}>
@@ -61,7 +37,7 @@ const Navbar = () => {
           onClick={() => {
             setShowModal(false);
           }}
-          href={"/home"}
+          href={"/"}
         >
           <Image
             className={`block dark:hidden ${"xlSpecial:w-[236px] xlSpecial:h-[30px] transition-all duration-300"} md:w-[189px] md:h-[24px] smallest:w-[142px] smallest:h-[18px]`}
@@ -81,32 +57,32 @@ const Navbar = () => {
         <span className='smallest:hidden phoneS:block'>
           <Nav />
         </span>
-        <span className='flex registerPopup:gap-10 gap-5 pr-16 items-center dark:text-white'>
+        <span className='flex registerPopup:gap-10 gap-5 registerPopup:pr-16 items-center dark:text-white'>
           <span className='flex registerPopup:flex smallest:hidden items-center gap-5 xl:gap-10 text-[17px] heroBreakFour:text-[20px] 2xl:text-[22px]'>
             <Link
               onClick={() => {}}
               className='hover:text-[#BCC6CC] transition-colors transform duration-300 dark:hover:text-[#4D4D4F]'
-              href={"/about"}
+              href={"/"}
             >
               Home
             </Link>
             <Link
               onClick={() => {}}
               className='hover:text-[#BCC6CC] transition-colors transform duration-300 dark:hover:text-[#4D4D4F]'
-              href={"/clients"}
+              href={"/"}
             >
               Experience
             </Link>
             <Link
               onClick={() => {}}
               className='hover:text-[#BCC6CC] transition-colors transform duration-300 dark:hover:text-[#4D4D4F]'
-              href={"/clients"}
+              href={"/"}
             >
               Projects
             </Link>
             <Link
               className='hover:text-[#BCC6CC] transition-colors transform duration-300 dark:hover:text-[#4D4D4F]'
-              href={"/resources"}
+              href={"/"}
               onClick={() => {}}
             >
               About me
@@ -114,21 +90,21 @@ const Navbar = () => {
             <Link
               className='hover:text-[#BCC6CC] transition-colors transform duration-300 dark:hover:text-[#4D4D4F]'
               onClick={() => {}}
-              href={"/contact"}
+              href={"/"}
             >
               Contact
             </Link>
           </span>
 
           <button className='registerPopup:hidden smallest:flex dark:hidden' onClick={toggleModal}>
-            <Image alt='x or hamburger' src={!showModal ? "/hamburger.svg" : "/menupp.svg"} width={25} height={25} />
+            <Image alt='x' src={!showModal ? lightHam.src : darkX.src} width={15} height={15} />
           </button>
           <button className='dark:flex dark:registerPopup:hidden hidden' onClick={toggleModal}>
             <Image
-              alt='x or hamburger'
-              src={!showModal ? "/darkHamburger.svg" : "/darkMenupp.svg"}
-              width={25}
-              height={25}
+              alt='x'
+              src={!showModal ? darkHam.src : lightX.src}
+              width={15}
+              height={15}
               className=''
             />
           </button>
