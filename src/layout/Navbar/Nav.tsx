@@ -15,7 +15,7 @@ const ThemeToggle = () => {
   return (
   
       <button
-        className={`absolute top-20 left-[20%]  transition-transform duration-300 ${
+        className={`absolute top-20 left-[15%]  transition-transform duration-300 ${
           isDarkTheme ? " transition-colors transform duration-300" : " transition-colors transform duration-300 "
         }`}
         onClick={handleToggle}
