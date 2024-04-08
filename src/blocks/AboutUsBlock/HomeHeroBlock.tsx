@@ -3,28 +3,36 @@ import Title from "@/components/Title";
 import Description from "@/components/Description";
 
 interface P {
-  title:any,
-  description:any}
-
+  title: any,
+  description: any
+}
 
 function HomeHeroBlock({
   title,
   description,
 }: P): JSX.Element {
   return (
-    <div className="bg-pink pt-[15%] justify-end items-end pl-40  dark:bg-black">
-      <div>
-                 <Title title={title ?? ''} alignment={"center"} fontSize={"big"} fontColor={"black"}  />
-      </div>
-      <div className=' w-[50%]  pt-8 flex reltive'>
-            <Description 
-              description={description ?? ""}
-              alignment={ "left"}
-              fontSize={ "medium"}
-              fontColor={"black"}
-            />
+    <div className="bg-pink container px-4 mx-auto dark:bg-black">
+      <div className="flex flex-col w-full max-w-[2000px] items-end">
+        <div className="xl:w-[60%] md:w-[80%] w-full md:pt-10 md:pr-40 text-right">
+          <Title
+            title={title ?? ''}
+            alignment={"left"}
+            fontSize={"big"}
+            fontColor={"black"}
+          />
+        </div>
+        <div className="xl:w-[60%] md:w-[80%] w-full pt-10 md:pr-40 text-right">
+          <Description
+            description={description ?? ""}
+            alignment={"left"}
+            fontSize={"medium"}
+            fontColor={"black"}
+          />
+        </div>
       </div>
     </div>
   );
 }
+
 export default HomeHeroBlock;
