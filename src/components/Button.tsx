@@ -38,7 +38,7 @@ function Button({
       styleText = ` text-yellow `;
       break;
     case "black":
-      styleText = ` text-black `;
+      styleText = ` text-charcoal `;
       break;
     case "peachy":
       styleText = ` text-peachy `;

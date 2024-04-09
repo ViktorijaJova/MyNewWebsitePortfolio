@@ -25,7 +25,7 @@ function Description({
       styleTextDesc = ` text-pink `;
       break;
     case "black":
-      styleTextDesc = ` text-black dark:text-white `;
+      styleTextDesc = ` text-charcoal dark:text-white `;
      break;  
     default:
       null;

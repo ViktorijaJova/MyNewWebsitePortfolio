@@ -51,16 +51,7 @@ const config: Config = {
         pink: "#FFEED9",
         white: "#FFFFFF",
         black: "#1F1F1F",
-        yellow: "#D7DF23",
-        peachy: "#E66B5B",
-        teal: "#00A79D",
-        purple2: "#C77BFF",
-        black2: "#3E3D3D",
-        yellow2: "#C8CE3C",
-        peachy2: "#C52F1B",
-        teal2: "#018078",
-        guyabano: "#f8f8f8",
-        charcoal: "#333333",
+       charcoal: "#333333",
       },
       typography: (theme:any) => ({
         DEFAULT: {

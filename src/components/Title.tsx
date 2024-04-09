@@ -20,7 +20,7 @@ function Title({ title, alignment, fontSize, fontColor }: P): JSX.Element {
       break;
       break;
     case "black":
-      styleText = ` text-black dark:text-white `;
+      styleText = ` text-charcoal dark:text-white `;
       break;
     default:
       null;
