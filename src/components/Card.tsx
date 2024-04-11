@@ -18,11 +18,11 @@ function Card({
         <div className=''>
 <Image src={image} alt="" width={40} height={40}></Image>
         </div>
-      <h2 className='flex text-charcoal dark:text-white text-[25px] '>
+      <h2 className='flex text-charcoal dark:text-white text-[22px] '>
         {title}
       </h2>
       </div>
-        <div className='font-light text-[22px] w-[70%]	text-charcoal dark:text-white'>
+        <div className='font-light text-[22px] w-full pt-8	text-charcoal dark:text-white'>
          {description}
         </div>
           </div>
